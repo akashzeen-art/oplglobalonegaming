@@ -9,12 +9,6 @@ import { useLanguage } from "../context/LanguageContext";
 
 const LANGUAGES = [
   { code: "en", label: "English" },
-  { code: "fr", label: "Français" },
-  { code: "ar", label: "العربية" },
-  { code: "es", label: "Español" },
-  { code: "rn", label: "Ikirundi" },
-  { code: "lo", label: "ລາວ" },
-  { code: "sw", label: "Kiswahili" },
   { code: "pl", label: "Polski" },
 ];
 

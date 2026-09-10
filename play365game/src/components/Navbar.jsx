@@ -62,7 +62,7 @@ const NavBar = () => {
         <nav className="flex size-full items-center justify-between p-4">
           <div className="flex items-center gap-7">
             <Link to="/">
-              <img src="/logo/Global1Gaminglogo.png" alt="Global 1 Gaming" className="h-16 w-auto md:h-20" />
+              <img src="/logo/Global1Gaminglogo.png" alt="Global One Gaming" className="h-16 w-auto md:h-20" />
             </Link>
             <Link to="/games">
               <Button

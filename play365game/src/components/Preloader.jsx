@@ -66,7 +66,7 @@ const Preloader = ({ onComplete }) => {
       <div className="relative z-10 flex flex-col items-center">
         <img
           src="/logo/Global1Gaminglogo.png"
-          alt="Global 1 Gaming"
+          alt="Global One Gaming"
           className="preloader-logo mb-8 h-32 w-auto md:h-40"
         />
         <div className="preloader-content text-center">

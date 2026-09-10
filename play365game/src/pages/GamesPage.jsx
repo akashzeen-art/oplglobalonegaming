@@ -61,7 +61,7 @@ const GameCard = ({ game, onPlay }) => {
   };
 
   return (
-    <div className="game-card-wrapper mb-4">
+    <div className="game-card-wrapper">
       <div
         ref={cardRef}
         className="game-card border-hsla group relative overflow-hidden rounded-xl transition-all duration-300"
@@ -69,12 +69,12 @@ const GameCard = ({ game, onPlay }) => {
         onMouseLeave={() => setTransformStyle("")}
         style={{ transform: transformStyle }}
       >
-        <div className="aspect-square w-full overflow-hidden bg-violet-300">
+        <div className="aspect-square w-full bg-black/40">
           <img
             src={game.img}
             alt={game.title}
             referrerPolicy="no-referrer"
-            className="h-full w-full object-cover transition-all duration-700 group-hover:scale-110"
+            className="h-full w-full object-contain transition-all duration-700 group-hover:scale-105"
           />
         </div>
         <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-t from-black via-black/80 to-transparent opacity-0 transition-all duration-500 group-hover:opacity-100">
@@ -174,7 +174,7 @@ const GamesPage = () => {
 
   return (
     <>
-      <div className="relative min-h-screen w-screen overflow-hidden pt-24 pb-20">
+      <div className="relative min-h-screen w-screen overflow-x-hidden pt-24 pb-20">
         <video
           src="/videos/hero-3.mp4"
           autoPlay
@@ -200,15 +200,13 @@ const GamesPage = () => {
             </p>
           </div>
 
-          <div className="mb-20 overflow-hidden">
+          <div className="mb-20">
             <h2 className="mb-6 special-font text-2xl font-black uppercase text-blue-75 sm:text-3xl md:text-5xl"
               dangerouslySetInnerHTML={{ __html: t.featuredGames }}
             />
-            <div className="flex gap-3 overflow-x-auto pb-4 scrollbar-hide sm:gap-4">
+            <div className="grid grid-cols-2 gap-3 sm:gap-4 sm:grid-cols-3 md:grid-cols-4">
               {sliderGames.map((game) => (
-                <div key={game.id} className="min-w-[150px] sm:min-w-[200px] md:min-w-[250px]">
-                  <GameCard game={game} onPlay={setGameUrl} />
-                </div>
+                <GameCard key={game.id} game={game} onPlay={setGameUrl} />
               ))}
             </div>
           </div>

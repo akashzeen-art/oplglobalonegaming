@@ -80,8 +80,8 @@ const CategoriesPage = () => {
           <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
             {filteredGames.map((game, idx) => (
               <div key={idx} className="group relative overflow-hidden rounded-xl border-2 border-violet-300/30 transition-all hover:border-violet-300">
-                <div className="aspect-square w-full overflow-hidden bg-violet-300/20">
-                  <img src={game.thumbnail_url} alt={game.name} referrerPolicy="no-referrer" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <div className="aspect-square w-full bg-black/40">
+                  <img src={game.thumbnail_url} alt={game.name} referrerPolicy="no-referrer" className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-105" />
                 </div>
                 <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/80 opacity-0 transition-opacity group-hover:opacity-100">
                   <h3 className="mb-3 px-2 text-center font-general text-sm font-bold text-white md:text-base">{game.name}</h3>

@@ -1,0 +1,12 @@
+{
+  "installCommand": "cd play365game && npm install",
+  "buildCommand": "cd play365game && npm run build",
+  "outputDirectory": "play365game/dist",
+  "framework": "vite",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
